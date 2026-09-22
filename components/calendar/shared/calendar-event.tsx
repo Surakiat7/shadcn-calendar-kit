@@ -44,7 +44,7 @@ export function CompactEvent({
       }}
       aria-label={eventAriaLabel(event)}
       className={cn(
-        "mt-(--event-gap) flex h-(--event-height) size-full touch-none items-center justify-start overflow-hidden px-1 text-left text-[10px] font-medium backdrop-blur-md transition sm:px-2 sm:text-xs",
+        "mt-(--event-gap) flex h-(--event-height) size-full touch-none items-center justify-start overflow-hidden px-1 text-left text-xs font-medium backdrop-blur-md transition sm:px-2",
         colorClasses[event.color],
         k === "single" && "rounded",
         k === "start" && "rounded-l rounded-r-none",
@@ -60,7 +60,7 @@ export function CompactEvent({
         )}
       >
         {!event.allDay && (
-          <span className="font-normal opacity-70 sm:text-[11px]">
+          <span className="font-normal opacity-70">
             {format(event.start, "ha").toLowerCase()}{" "}
           </span>
         )}
@@ -97,7 +97,7 @@ export function TimedEvent({ event }: { event: CalendarEvent }) {
       )}
     >
       <div className="truncate">{event.title}</div>
-      <div className="truncate font-normal opacity-70 sm:text-[11px]">
+      <div className="truncate font-normal opacity-70">
         {format(event.start, "ha").toLowerCase()} -{" "}
         {format(event.end, "ha").toLowerCase()}
       </div>

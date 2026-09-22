@@ -13,7 +13,7 @@ export function TimeGutter() {
           style={{ height: HOUR_HEIGHT }}
         >
           {h > 0 && (
-            <span className="absolute -top-3 left-0 flex h-6 w-16 max-w-full items-center justify-end bg-background pe-2 text-[10px] text-muted-foreground/70 sm:pe-4 sm:text-xs">
+            <span className="absolute -top-3 left-0 flex h-6 w-16 max-w-full items-center justify-end bg-background pe-2 text-xs text-muted-foreground/70 sm:pe-4">
               {h === 12 ? "12 PM" : h > 12 ? `${h - 12} PM` : `${h} AM`}
             </span>
           )}

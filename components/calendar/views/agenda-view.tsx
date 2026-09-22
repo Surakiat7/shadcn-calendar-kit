@@ -21,7 +21,7 @@ export function AgendaView() {
             key={d.toISOString()}
             className="relative my-12 border-t border-border/70"
           >
-            <span className="absolute -top-3 left-0 flex h-6 items-center bg-background pe-4 text-[10px] uppercase sm:text-xs">
+            <span className="absolute -top-3 left-0 flex h-6 items-center bg-background pe-4 text-xs uppercase">
               {format(d, "d MMM, EEEE")}
             </span>
 

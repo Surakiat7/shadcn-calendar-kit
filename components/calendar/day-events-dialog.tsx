@@ -65,7 +65,7 @@ export function DayEventsDialog() {
             aria-hidden="true"
             className="size-2.5 shrink-0 rounded-full bg-rose-500"
           />
-          <DialogTitle className="min-w-0 flex-1 text-sm font-semibold leading-tight sm:text-base">
+          <DialogTitle className="min-w-0 flex-1 text-base font-semibold leading-tight">
             {title}
           </DialogTitle>
           <DialogClose className="inline-flex size-7 shrink-0 items-center justify-center rounded-2xl transition-colors hover:bg-muted">

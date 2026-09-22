@@ -69,7 +69,7 @@ export function MonthView() {
                           type="button"
                           variant="none"
                           size="none"
-                          className="mt-(--event-gap) h-(--event-height) w-full justify-start px-1 text-left text-[10px] text-muted-foreground hover:bg-muted/50 sm:px-2 sm:text-xs"
+                          className="mt-(--event-gap) h-(--event-height) w-full justify-start px-1 text-left text-xs text-muted-foreground hover:bg-muted/50 sm:px-2"
                         >
                           + {list.length - 3}{" "}
                           <span className="max-sm:sr-only">more</span>

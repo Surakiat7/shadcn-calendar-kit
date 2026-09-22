@@ -30,7 +30,7 @@ export function WeekView() {
       <div className="border-b border-border/70 bg-muted/50">
         <div className="grid grid-cols-8">
           <div className="relative border-r border-border/70">
-            <span className="absolute bottom-0 left-0 h-6 w-16 max-w-full pe-2 text-right text-[10px] text-muted-foreground/70 sm:pe-4 sm:text-xs">
+            <span className="absolute bottom-0 left-0 h-6 w-16 max-w-full pe-2 text-right text-xs text-muted-foreground/70 sm:pe-4">
               All day
             </span>
           </div>

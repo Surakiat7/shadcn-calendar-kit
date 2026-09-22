@@ -66,7 +66,7 @@ export function EventDrawer() {
     >
       <DrawerContent className="inset-x-auto inset-y-0 right-0 mt-0 h-full w-[92%] rounded-t-none rounded-l-xl border-l bg-popover text-popover-foreground sm:max-w-md [&>div:first-child]:hidden">
         <DrawerHeader className="flex-row items-center justify-between gap-0 border-b">
-          <DrawerTitle className="text-base font-medium">
+          <DrawerTitle className="text-base font-semibold">
             {editing ? "Edit Event" : "Create Event"}
           </DrawerTitle>
           <DrawerDescription className="sr-only">

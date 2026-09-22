@@ -82,7 +82,7 @@ function YearMonthCard({
           {WEEKDAY_LABELS_NARROW.map((d) => (
             <div
               key={d}
-              className="flex size-9 items-center justify-center py-1 text-center text-[10px] font-normal text-muted-foreground/70"
+              className="flex size-9 items-center justify-center py-1 text-center text-xs font-normal text-muted-foreground/70"
             >
               {d}
             </div>
@@ -135,7 +135,7 @@ function YearDayCell({
           disabled
           tabIndex={-1}
           aria-label={label}
-          className="flex size-9 cursor-default select-none flex-col items-center justify-center gap-0.5 rounded-lg text-[11px] opacity-25"
+          className="flex size-9 cursor-default select-none flex-col items-center justify-center gap-0.5 rounded-lg text-xs opacity-25"
         >
           <span>{format(day, "d")}</span>
           <span className="min-h-2" />
@@ -158,7 +158,7 @@ function YearDayCell({
           count ? `${label}, ${count} event${count === 1 ? "" : "s"}` : label
         }
         className={cn(
-          "flex size-9 cursor-pointer select-none flex-col items-center justify-center gap-0.5 rounded-lg text-[11px] transition",
+          "flex size-9 cursor-pointer select-none flex-col items-center justify-center gap-0.5 rounded-lg text-xs transition",
           isSameDay(day, today)
             ? "bg-primary font-semibold text-primary-foreground"
             : "hover:bg-primary/10 dark:hover:bg-primary/20",

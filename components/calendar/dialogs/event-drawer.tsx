@@ -282,7 +282,14 @@ function TimeSelect({
         <SelectValue />
       </SelectTrigger>
 
-      <SelectContent>
+      <SelectContent
+        position="popper"
+        align="end"
+        sideOffset={4}
+        collisionPadding={12}
+        avoidCollisions
+        className="z-[70] max-h-[min(14rem,var(--radix-select-content-available-height))] min-w-0 w-(--radix-select-trigger-width)"
+      >
         {options.map((t) => (
           <SelectItem key={t} value={t}>
             {t}

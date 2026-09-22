@@ -47,7 +47,7 @@
     "postcss": "latest",
     "shadcn": "4.21.0",
     "tailwindcss": "4.3.3",
-    "typescript": "latest",
+    "typescript": "^5.9.3",
     "vitest": "^5.0.0"
   }
 }

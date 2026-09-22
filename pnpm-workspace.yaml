@@ -1,0 +1,6 @@
+allowBuilds:
+  unrs-resolver: true
+
+# pnpm 11 enables this supply-chain check by default; disabled so freshly
+# published versions in the lockfile don't block installs/scripts.
+minimumReleaseAge: 0

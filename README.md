@@ -1,4 +1,4 @@
-# Shadcn-style Calendar clean-room clone
+# shadcn-calendar-kit
 
 This is an original implementation reconstructed from the user-provided DOM/screenshots of the Shadcn UI Kit calendar. It is **not the vendor's proprietary source code**.
 

@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/*
+ * Drive `dark:` utilities from the `.dark` class so they stay in sync with the
+ * design tokens below (which are also class-scoped). Without this, Tailwind v4
+ * defaults `dark:` to `prefers-color-scheme`, so an OS in dark mode would apply
+ * dark event styles (light text) over the still-light token background, making
+ * event text unreadable.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

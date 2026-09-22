@@ -1,34 +1,105 @@
 # shadcn-calendar-kit
 
-This is an original implementation reconstructed from the user-provided DOM/screenshots of the Shadcn UI Kit calendar. It is **not the vendor's proprietary source code**.
+A modern, fully‑featured calendar UI for React, built with Next.js, Tailwind CSS v4, and shadcn/ui‑style components. It ships month, week, day, agenda, and year views, drag‑and‑drop scheduling, and accessible event dialogs — ready to drop into your own product.
 
-## Stack (verified 2026-09-21)
-- Next.js 16.3.5
-- React 19.x
-- Tailwind CSS 4.3.3
-- shadcn CLI 4.21.0
-- @dnd-kit/core 6.3.1
-- lucide-react 1.47.0
+> This is an original, clean‑room implementation inspired by common calendar UX patterns. It is not affiliated with, nor derived from, any vendor's proprietary source code.
 
-## Included
-- Month / Week / Day / Agenda modes
-- Responsive toolbar (`M/W/D/A` compact state under 480px)
-- Month grid and multi-day segmented events
-- 24h day/week time grid with 15-minute drop slots
-- Timed events with absolute time positioning
-- Current-time indicator
-- Agenda cards
-- Right-side create/edit drawer shell
-- Shared pastel event colors and dark mode tokens
-- dnd-kit drag/drop infrastructure
+## Features
 
-## Run
+- **Five views** — Month, Week, Day, Agenda, and Year, with a shared state provider.
+- **Drag‑and‑drop scheduling** — reschedule events on the day/week grid (powered by `@dnd-kit`), with a pointer activation threshold so clicks still open events reliably.
+- **Event details dialog** — click any event for a read‑only summary with edit and delete actions.
+- **Create / edit drawer** — a right‑side form for title, description, date/time, all‑day, location, and color.
+- **Rich event model** — timed, all‑day, multi‑day, and overlapping events, with a live current‑time indicator.
+- **Responsive** — adaptive toolbar (compact `M / W / D / A` state under 480px) and layouts that work from mobile to desktop.
+- **Light & dark themes** — class‑based design tokens with an accessible, high‑contrast pastel event palette that stays readable in both schemes.
+- **Accessible** — semantic roles, `aria-label`s on events, and keyboard‑focusable controls.
+- **Tested** — component tests with Vitest and Testing Library.
+
+## Tech stack
+
+| Area | Library | Version |
+| --- | --- | --- |
+| Framework | Next.js | 16.3.5 |
+| UI runtime | React | 19.x |
+| Styling | Tailwind CSS | 4.3.3 |
+| Components | shadcn/ui + Base UI / Radix primitives | — |
+| Drag & drop | @dnd-kit/core | 6.3.1 |
+| Drawer | vaul | 1.1.x |
+| Icons | lucide-react | 1.47.0 |
+| Dates | date-fns | latest |
+| Testing | Vitest + Testing Library | — |
+
+## Getting started
+
 ```bash
+# install dependencies (pnpm recommended)
 pnpm install
+
+# start the dev server
 pnpm dev
 ```
 
-## Notes
-The supplied DOM showed Vaul/Radix-style drawer attributes, but this clean-room package uses a dependency-light controlled drawer so the example is portable. Replace `components/calendar/event-drawer.tsx` with your project's shadcn Drawer/Sheet primitive if desired.
+Then open [http://localhost:3000](http://localhost:3000).
 
-The color picker intentionally uses static Tailwind class names elsewhere; if you keep the dynamic `bg-${color}-400` expression in the drawer, replace it with a static mapping before production so Tailwind can detect every class reliably.
+Other scripts:
+
+```bash
+pnpm build   # production build
+pnpm start   # run the production build
+pnpm lint    # lint with ESLint
+pnpm test    # run the Vitest suite
+```
+
+## Project structure
+
+```
+app/                         # Next.js app router entry, global styles
+components/
+  ui/                        # shadcn/ui-style primitives (button, input, dialog, …)
+  calendar/
+    calendar.tsx             # shell that composes the views + dialogs
+    calendar-provider.tsx    # shared state, dnd context, event actions
+    calendar-demo.tsx        # example mount with mock events
+    event-drawer.tsx         # create / edit form
+    event-details-dialog.tsx # read-only event details
+    day-events-dialog.tsx    # "events on this day" list
+    views/                   # month / week / day / agenda / year
+    shared/                  # event chips, time grid, color styles, helpers
+lib/                         # utilities (cn)
+```
+
+## Usage
+
+Wrap your app in `CalendarProvider` and render `Calendar`. See
+`components/calendar/calendar-demo.tsx` for a complete example, including the
+`CalendarEvent` shape and sample data.
+
+```tsx
+import { CalendarProvider } from "@/components/calendar/calendar-provider";
+import { Calendar } from "@/components/calendar/calendar";
+
+export function MyCalendar({ events }) {
+  return (
+    <CalendarProvider initialEvents={events}>
+      <Calendar />
+    </CalendarProvider>
+  );
+}
+```
+
+Events use static Tailwind class names for their colors (see
+`components/calendar/shared/event-styles.ts`) so every class is detected at build
+time. If you extend the palette, add the new classes to that static mapping
+rather than composing them dynamically.
+
+## License
+
+Released under the [MIT License](./LICENSE) — free to use, modify, and
+distribute, including for commercial projects. Attribution is appreciated but
+not required.
+
+## Contributing
+
+Issues and pull requests are welcome. Please run `pnpm test` and `pnpm lint`
+before opening a PR.

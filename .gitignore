@@ -41,8 +41,12 @@ yarn-error.log*
 *.swp
 
 # local tooling & agent artifacts
-/.agents/
+# Note: .agents/{context,plans,research} and AGENTS.md ARE tracked (agent docs).
+# Only the vendored skill tooling and auto-generated CLAUDE.md are ignored.
+/.agents/skills/
+/.agents/AGENTS.md
+/.claude/skills/
+/skills-lock.json
 /.playwright-mcp/
 .dev-server.log
-AGENTS.md
 CLAUDE.md

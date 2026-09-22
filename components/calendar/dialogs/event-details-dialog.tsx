@@ -21,10 +21,10 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import { useCalendar } from "./calendar-provider";
-import type { CalendarEvent } from "./calendar-types";
-import { format, isSameDay } from "./calendar-utils";
-import { dotClasses } from "./shared/event-styles";
+import { useCalendar } from "../core/calendar-provider";
+import type { CalendarEvent } from "../core/calendar-types";
+import { format, isSameDay } from "../core/calendar-utils";
+import { dotClasses } from "../shared/event-styles";
 
 function dateLabel(event: CalendarEvent) {
   if (isSameDay(event.start, event.end)) {

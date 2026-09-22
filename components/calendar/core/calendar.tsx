@@ -1,15 +1,15 @@
 "use client";
 
 import { useCalendar } from "./calendar-provider";
-import { CalendarToolbar } from "./shared/calendar-toolbar";
-import { MonthView } from "./views/month-view";
-import { WeekView } from "./views/week-view";
-import { DayView } from "./views/day-view";
-import { AgendaView } from "./views/agenda-view";
-import { YearView } from "./views/year-view";
-import { EventDrawer } from "./event-drawer";
-import { DayEventsDialog } from "./day-events-dialog";
-import { EventDetailsDialog } from "./event-details-dialog";
+import { CalendarToolbar } from "../shared/calendar-toolbar";
+import { MonthView } from "../views/month-view";
+import { WeekView } from "../views/week-view";
+import { DayView } from "../views/day-view";
+import { AgendaView } from "../views/agenda-view";
+import { YearView } from "../views/year-view";
+import { EventDrawer } from "../dialogs/event-drawer";
+import { DayEventsDialog } from "../dialogs/day-events-dialog";
+import { EventDetailsDialog } from "../dialogs/event-details-dialog";
 
 export function Calendar() {
   const { view } = useCalendar();

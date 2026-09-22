@@ -1,7 +1,7 @@
 "use client";
 
-import { useCalendar } from "../calendar-provider";
-import { dayEvents } from "../calendar-utils";
+import { useCalendar } from "../core/calendar-provider";
+import { dayEvents } from "../core/calendar-utils";
 import { PositionedTimedEvent } from "../shared/calendar-event";
 import { DayTimeColumn, TimeGutter } from "../shared/time-grid";
 

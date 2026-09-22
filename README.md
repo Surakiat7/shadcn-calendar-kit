@@ -54,30 +54,27 @@ pnpm test    # run the Vitest suite
 ## Project structure
 
 ```
-app/                         # Next.js app router entry, global styles
+app/                           # Next.js app router entry, global styles
 components/
-  ui/                        # shadcn/ui-style primitives (button, input, dialog, …)
+  ui/                          # shadcn/ui-style primitives (button, input, dialog, …)
   calendar/
-    calendar.tsx             # shell that composes the views + dialogs
-    calendar-provider.tsx    # shared state, dnd context, event actions
-    calendar-demo.tsx        # example mount with mock events
-    event-drawer.tsx         # create / edit form
-    event-details-dialog.tsx # read-only event details
-    day-events-dialog.tsx    # "events on this day" list
-    views/                   # month / week / day / agenda / year
-    shared/                  # event chips, time grid, color styles, helpers
-lib/                         # utilities (cn)
+    index.ts                   # public barrel exports
+    core/                      # shell, provider, types, utils
+    dialogs/                   # event drawer, details, day-events list
+    views/                     # month / week / day / agenda / year
+    shared/                    # event chips, time grid, color styles, helpers
+    demo/                      # example mount with mock events
+lib/                           # utilities (cn)
 ```
 
 ## Usage
 
 Wrap your app in `CalendarProvider` and render `Calendar`. See
-`components/calendar/calendar-demo.tsx` for a complete example, including the
+`components/calendar/demo/calendar-demo.tsx` for a complete example, including the
 `CalendarEvent` shape and sample data.
 
 ```tsx
-import { CalendarProvider } from "@/components/calendar/calendar-provider";
-import { Calendar } from "@/components/calendar/calendar";
+import { CalendarProvider, Calendar } from "@/components/calendar";
 
 export function MyCalendar({ events }) {
   return (

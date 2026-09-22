@@ -2,8 +2,8 @@
 
 import { addDays } from "date-fns";
 
-import { useCalendar } from "../calendar-provider";
-import { dayEvents, format } from "../calendar-utils";
+import { useCalendar } from "../core/calendar-provider";
+import { dayEvents, format } from "../core/calendar-utils";
 import { AgendaEvent } from "../shared/calendar-event";
 
 export function AgendaView() {

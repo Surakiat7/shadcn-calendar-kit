@@ -1,10 +1,10 @@
 import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import { CalendarProvider } from "../calendar-provider";
+import { CalendarProvider } from "../core/calendar-provider";
 import { YearView } from "../views/year-view";
-import type { CalendarEvent } from "../calendar-types";
-import { format } from "../calendar-utils";
+import type { CalendarEvent } from "../core/calendar-types";
+import { format } from "../core/calendar-utils";
 
 const d = (day: number, h = 0, m = 0) => new Date(2026, 8, day, h, m);
 

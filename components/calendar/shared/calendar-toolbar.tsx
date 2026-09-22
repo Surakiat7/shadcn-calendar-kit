@@ -23,9 +23,9 @@ import {
   CommandList,
 } from "@/components/ui/command";
 
-import { useCalendar } from "../calendar-provider";
-import { navigate, viewTitle } from "../calendar-utils";
-import type { CalendarView } from "../calendar-types";
+import { useCalendar } from "../core/calendar-provider";
+import { navigate, viewTitle } from "../core/calendar-utils";
+import type { CalendarView } from "../core/calendar-types";
 
 const labels: Record<CalendarView, string> = {
   month: "Month",

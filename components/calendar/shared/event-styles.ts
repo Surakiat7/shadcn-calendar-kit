@@ -1,4 +1,4 @@
-import type { EventColor } from "../calendar-types";
+import type { EventColor } from "../core/calendar-types";
 
 export const colorClasses: Record<EventColor, string> = {
   sky: "bg-sky-100 text-sky-900 hover:bg-sky-200 dark:bg-sky-400/25 dark:text-sky-50 dark:hover:bg-sky-400/35 shadow-sky-700/8",

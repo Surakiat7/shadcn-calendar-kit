@@ -1,4 +1,4 @@
-import { CalendarDemo } from "@/components/calendar/calendar-demo";
+import { CalendarDemo } from "@/components/calendar";
 
 export default function Page() {
   return (

@@ -31,10 +31,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { useCalendar } from "./calendar-provider";
-import type { EventColor } from "./calendar-types";
-import { format, withTime } from "./calendar-utils";
-import { dotClasses } from "./shared/event-styles";
+import { useCalendar } from "../core/calendar-provider";
+import type { EventColor } from "../core/calendar-types";
+import { format, withTime } from "../core/calendar-utils";
+import { dotClasses } from "../shared/event-styles";
 
 const colors: EventColor[] = [
   "sky",

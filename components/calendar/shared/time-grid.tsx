@@ -1,7 +1,7 @@
 "use client";
 
 import { Droppable } from "./droppable";
-import { HOUR_HEIGHT } from "../calendar-utils";
+import { HOUR_HEIGHT } from "../core/calendar-utils";
 
 export function TimeGutter() {
   return (

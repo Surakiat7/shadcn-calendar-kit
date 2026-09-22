@@ -1,8 +1,8 @@
 "use client";
 
-import { CalendarProvider } from "./calendar-provider";
-import { Calendar } from "./calendar";
-import type { CalendarEvent } from "./calendar-types";
+import { CalendarProvider } from "../core/calendar-provider";
+import { Calendar } from "../core/calendar";
+import type { CalendarEvent } from "../core/calendar-types";
 
 const d = (day: number, h = 0, m = 0) => new Date(2026, 8, day, h, m);
 

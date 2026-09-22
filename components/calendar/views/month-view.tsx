@@ -1,6 +1,6 @@
 "use client";
 
-import { useCalendar } from "../calendar-provider";
+import { useCalendar } from "../core/calendar-provider";
 import {
   dayEvents,
   format,
@@ -8,7 +8,7 @@ import {
   isSameMonth,
   monthDays,
   WEEKDAY_LABELS,
-} from "../calendar-utils";
+} from "../core/calendar-utils";
 import { Button } from "@/components/ui/button";
 
 import { CompactEvent } from "../shared/calendar-event";

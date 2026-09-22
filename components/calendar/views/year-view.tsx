@@ -5,8 +5,8 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
-import { useCalendar } from "../calendar-provider";
-import type { CalendarEvent } from "../calendar-types";
+import { useCalendar } from "../core/calendar-provider";
+import type { CalendarEvent } from "../core/calendar-types";
 import {
   dayKey,
   format,
@@ -15,7 +15,7 @@ import {
   isSameMonth,
   monthDays,
   WEEKDAY_LABELS_NARROW,
-} from "../calendar-utils";
+} from "../core/calendar-utils";
 import { dotClasses } from "../shared/event-styles";
 
 const NO_EVENTS: CalendarEvent[] = [];

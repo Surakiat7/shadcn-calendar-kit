@@ -12,15 +12,15 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 
-import { useCalendar } from "./calendar-provider";
-import type { CalendarEvent } from "./calendar-types";
+import { useCalendar } from "../core/calendar-provider";
+import type { CalendarEvent } from "../core/calendar-types";
 import {
   dayEvents,
   eventAriaLabel,
   eventTimeLabel,
   format,
-} from "./calendar-utils";
-import { colorClasses } from "./shared/event-styles";
+} from "../core/calendar-utils";
+import { colorClasses } from "../shared/event-styles";
 
 export function DayEventsDialog() {
   const {
